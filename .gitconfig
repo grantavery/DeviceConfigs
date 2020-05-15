@@ -1,0 +1,54 @@
+[alias]
+	# Run "git {command}"
+  	# Get the name of the current branch as a string
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+	# List aliases
+	la = "!git config -l | grep alias | cut -c 7-"
+
+	# Show pretty history with a visual graph
+	graph = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)'
+
+	# Remove local refs to deleted remote branches. Get it? A prune's origin is a plum. #gitjokes
+	plum = remote prune origin
+
+	# Publish the current local branch to origin, setting the upstream branch to the same name
+	publish = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+
+	# Squash all commits on your branch and leave the results as staged changes (provide base branch as argument, ex. 'git squash master')
+	squash = "!f() { git reset --soft $(git merge-base $1 $(git rev-parse --abbrev-ref HEAD));}; f"
+
+	# Brief status for all branches
+	statuses = "for-each-ref --format='%(refname:short) %(push:track)' refs/heads"
+
+	# Undo before you commit (provide file or glob pattern as argument, ex. 'git unstage .')
+	unmodify = checkout --
+	unstage = reset HEAD --
+[core]
+  # Windows - normalize end-of-line
+	autocrlf = true
+	# Windows only
+	editor = 'C:\\Users\\gra84632\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe' --wait
+	# Mac only
+	excludesfile = /Users/grantavery/.gitignore_global
+[credential]
+	helper = manager
+[diff]
+	# Use a smarter diff algorithm for 'git diff'
+	algorithm = histogram
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[init]
+	templatedir = ~/.git-templates
+[mergetool "sourcetree"]
+	trustExitCode = true
+	# Mac only
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	# PC only
+	cmd = "'' "
+[user]
+	name = Grant Avery
+	email = grantavery@icloud.com
+[commit]
+	template = /Users/grantavery/.stCommitMsg

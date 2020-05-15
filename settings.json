@@ -1,0 +1,20 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "typescript.check.tscVersion": false,
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "window.menuBarVisibility": "default",
+    "window.zoomLevel": 0,
+    "editor.detectIndentation": false,
+    "extensions.ignoreRecommendations": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.tabSize": 2,
+    "tslint.autoFixOnSave": true,
+    "jshint.options": {
+      "esversion": 6
+    }
+}
