@@ -40,7 +40,7 @@ brew "git"
 # nvm should install the current version of node automatically:
 brew "nvm"
 #brew "node"
-# rRquires the Java JDK: https://www.oracle.com/technetwork/java/javase/downloads/index.html:
+# Requires the Java JDK: https://www.oracle.com/technetwork/java/javase/downloads/index.html:
 brew "maven"
 brew "openshift-cli"
 brew "python"
