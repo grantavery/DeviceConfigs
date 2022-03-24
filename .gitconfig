@@ -28,9 +28,10 @@
   # Windows - normalize end-of-line
 	autocrlf = true
 	# Windows only
-	editor = 'C:\\Users\\gra84632\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe' --wait
+	# editor = 'C:\\Users\\gra84632\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe' --wait
 	# Mac only
-	excludesfile = /Users/grantavery/.gitignore_global
+  editor = code -w
+	excludesfile = /Users/egl9s/.gitignore_global
 [credential]
 	helper = manager
 [diff]

@@ -83,7 +83,7 @@ plugins=(
 	npm
 	nvm
 	xcode
-	osx
+	macos
 	ng
 	gatsby
 	copydir
@@ -182,13 +182,14 @@ function goToProjectDirectory(){
 alias cl="git clone"
 alias ch="git checkout"
 alias st="git status"
-alias ft="git fetch"
+alias ft="git fetch --all"
 alias br="git branch"
 alias cm="git commit -am" # still need to add a message after "am". (-a does all files, -m does a message; do -am for both)
 alias push="git push"
 alias pull="git pull"
 alias stash="git stash" # still need to add a message after "stash"
 alias stashp="git stash pop"
+alias rb='git rebase'
 
 
 # ----------------------------------------------------------------------------
@@ -226,6 +227,8 @@ alias mem="top -o rsize" # memory
 # mute the system volume
 alias mute="osascript -e 'set volume output muted true'"
 
+# append ` | jsonpp` to any command that returns json data to have it pretty-printed. From Marco Arment
+alias jsonpp='json_pp -json_opt pretty,utf8'
 
 # Mac specific?
 export NVM_DIR="$HOME/.nvm"
